@@ -8,6 +8,55 @@
 }
 
 .highlight {
+    -fx-background-color: transparent;
     -fx-background-color: #00000025;
     -fx-background-radius: 15;
 }
+
+.form {
+    -fx-background-radius: 0;
+    -fx-background-color: #00000025;
+}
+
+.button-save {
+    -fx-background-color: #004080;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-cancel {
+    -fx-background-color: #DC143C;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.menu-bar {
+    -fx-background-color: #00000025;
+    -fx-text-fill: black;
+}
+
+.menu-bar .menu {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.menu-bar .menu .menu-item {
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu .menu-item .menu-item .menu-item {
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu .menu-item:focused {
+    -fx-background-color: #00000025;
+}
+
+.menu-bar .menu .menu-item .menu-item:focused {
+    -fx-background-color: #00000025;
+}
+
+.menu-bar .menu .menu-item .menu-item .menu-item:focused {
+    -fx-background-color: #00000025;
+}
+

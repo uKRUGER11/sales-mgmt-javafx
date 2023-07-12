@@ -28,7 +28,6 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.initStyle(StageStyle.TRANSPARENT);
         stage.setResizable(false);
-        stage.setTitle("Manager");
 
         ((MainController) loader.getController()).init(stage);
         stage.show();

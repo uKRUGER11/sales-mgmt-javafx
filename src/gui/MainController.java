@@ -23,8 +23,8 @@ import java.util.ResourceBundle;
 import java.util.function.Consumer;
 
 public class MainController implements Initializable {
-    //@FXML private ScrollPane scrollPane;
-    //@FXML private VBox vBox;
+    @FXML private ScrollPane scrollPane;
+    @FXML private VBox vBox;
     @FXML private Pane titlePane;
     @FXML private ImageView btnMinimize, btnClose;
 
@@ -89,7 +89,7 @@ public class MainController implements Initializable {
             T controller = loader.getController();
             initializingAction.accept(controller);
         } catch (IOException e) {
-            Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), Alert.AlertType.ERROR);
+            Alerts.showAlert("IO Exception", "Erro ao carregar a página", e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 }
