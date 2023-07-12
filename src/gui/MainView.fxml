@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="mainPane" stylesheets="@../application/MainStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainController">
+    <children>
+        <ScrollPane fx:id="scrollPane" layoutX="4.0" layoutY="38.0" prefHeight="357.0" prefWidth="593.0" styleClass="root" stylesheets="@../application/MainStyle.css">
+            <content>
+                <VBox fx:id="vBox" prefHeight="280.0" prefWidth="510.0">
+                    <children>
+                        <MenuBar>
+                            <menus>
+                                <Menu mnemonicParsing="false" text="Cadastro">
+                                    <items>
+                                        <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" text="Vendedor" />
+                                        <MenuItem fx:id="menuItemDepartment" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" text="Departamento" />
+                                    </items>
+                                </Menu>
+                                <Menu mnemonicParsing="false" text="Ajuda">
+                                    <items>
+                                        <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#onMenuItemAboutAction" text="Sobre" />
+                                    </items>
+                                </Menu>
+                            </menus>
+                        </MenuBar>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+        <Pane fx:id="titlePane" layoutX="11.0" layoutY="1.0" prefHeight="39.0" prefWidth="582.0">
+            <children>
+                <Label layoutX="32.0" layoutY="11.0" text="Gerenciador de Vendas" textFill="WHITE" />
+            <ImageView fx:id="btnClose" fitHeight="28.0" fitWidth="37.0" layoutX="550.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\ProjetosFX\sales-mgmt\src\images\cancel.png" />
+               </image></ImageView>
+            <ImageView fitHeight="28.0" fitWidth="37.0" layoutX="2.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\ProjetosFX\sales-mgmt\src\images\icon.png" />
+               </image></ImageView>
+            <ImageView fx:id="btnMinimize" fitHeight="28.0" fitWidth="37.0" layoutX="509.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="C:\ProjetosFX\sales-mgmt\src\images\backspace.png" />
+               </image></ImageView>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
