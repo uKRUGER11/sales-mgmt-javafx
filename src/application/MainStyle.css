@@ -18,14 +18,20 @@
     -fx-background-color: #00000025;
 }
 
+.button-new {
+    -fx-background-color: #2510a3;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
 .button-save {
-    -fx-background-color: #004080;
+    -fx-background-color: #3cb371;
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }
 
 .button-cancel {
-    -fx-background-color: #DC143C;
+    -fx-background-color: #cc0000;
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }

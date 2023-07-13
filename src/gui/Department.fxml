@@ -21,13 +21,14 @@
       </Label>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
-          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" style="-fx-font-family: SansSerif;" styleClass="button-save" stylesheets="@../application/MainStyle.css" text="Novo" />
+          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" style="-fx-font-family: SansSerif;" styleClass="button-new" stylesheets="@../application/MainStyle.css" text="Novo" />
         </items>
       </ToolBar>
       <TableView fx:id="tableViewDepartment" prefHeight="200.0" prefWidth="200.0" styleClass="menu-bar" stylesheets="@../application/MainStyle.css">
         <columns>
           <TableColumn fx:id="tableColumnId" prefWidth="75.0" style="-fx-font-family: SansSerif;" text="ID" />
           <TableColumn fx:id="tableColumnName" prefWidth="75.0" style="-fx-font-family: SansSerif;" text="Nome" />
+            <TableColumn fx:id="tableColumnEdit" style="-fx-font-family: SansSerif;" prefWidth="75.0" />
         </columns>
       </TableView>
    </children>
