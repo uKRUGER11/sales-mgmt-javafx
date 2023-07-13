@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentController">
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SellerController">
    <children>
       <Label style="-fx-font-family: SansSerif;" text="Cadastro de Departamento">
          <font>
@@ -24,12 +24,15 @@
           <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" style="-fx-font-family: SansSerif;" styleClass="button-new" stylesheets="@../application/MainStyle.css" text="Novo" />
         </items>
       </ToolBar>
-      <TableView fx:id="tableViewDepartment" prefHeight="200.0" prefWidth="200.0" styleClass="menu-bar" stylesheets="@../application/MainStyle.css">
+      <TableView fx:id="tableViewSeller" prefHeight="200.0" prefWidth="200.0" styleClass="menu-bar" stylesheets="@../application/MainStyle.css">
         <columns>
-          <TableColumn fx:id="tableColumnId" prefWidth="41.0" style="-fx-font-family: SansSerif;" text="ID" />
-          <TableColumn fx:id="tableColumnName" prefWidth="131.0" style="-fx-font-family: SansSerif;" text="Nome" />
-            <TableColumn fx:id="tableColumnEdit" prefWidth="68.0" style="-fx-font-family: SansSerif;" />
-            <TableColumn fx:id="tableColumnDelete" prefWidth="70.0" />
+          <TableColumn fx:id="tableColumnId" prefWidth="44.0" style="-fx-font-family: SansSerif;" text="ID" />
+          <TableColumn fx:id="tableColumnName" prefWidth="83.0" style="-fx-font-family: SansSerif;" text="Nome" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="120.0" text="E-mail" />
+            <TableColumn fx:id="tableColumnBirthDate" prefWidth="87.0" text="Data de Nascimento" />
+            <TableColumn fx:id="tableColumnBaseSalary" minWidth="0.0" prefWidth="87.0" text="Salário" />
+            <TableColumn fx:id="tableColumnEdit" minWidth="0.0" prefWidth="76.0" style="-fx-font-family: SansSerif;" />
+            <TableColumn fx:id="tableColumnDelete" prefWidth="68.0" />
         </columns>
       </TableView>
    </children>
