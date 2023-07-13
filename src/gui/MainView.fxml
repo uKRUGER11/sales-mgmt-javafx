@@ -16,10 +16,14 @@
     <children>
         <ScrollPane fx:id="scrollPane" layoutX="4.0" layoutY="38.0" prefHeight="357.0" prefWidth="593.0" styleClass="root" stylesheets="@../application/MainStyle.css">
             <content>
-                <VBox fx:id="vBox" prefHeight="280.0" prefWidth="510.0">
+                <VBox fx:id="vBox" prefHeight="280.0" prefWidth="594.0">
                     <children>
-                        <MenuBar styleClass="menu-item" stylesheets="@../application/MainStyle.css">
+                        <MenuBar prefHeight="33.0" prefWidth="562.0" styleClass="menu-item" stylesheets="@../application/MainStyle.css">
                             <menus>
+                        <Menu text="Páginas">
+                           <items>
+                              <MenuItem fx:id="menuItemHome" mnemonicParsing="false" onAction="#onMenuItemHomeAction" text="Início" />
+                           </items></Menu>
                                 <Menu style="-fx-font-family: SansSerif;" text="Cadastro">
                                     <items>
                                         <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" styleClass="menu-item" text="Vendedor" />

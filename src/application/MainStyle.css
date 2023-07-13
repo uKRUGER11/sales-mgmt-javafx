@@ -35,6 +35,11 @@
     -fx-text-fill: black;
 }
 
+.menu-item {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
 .menu-bar .menu {
     -fx-text-fill: white;
     -fx-font-weight: bold;

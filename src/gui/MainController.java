@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
@@ -44,12 +45,18 @@ public class MainController implements Initializable {
         btnMinimize.setOnMouseClicked(mouseEvent -> stage.setIconified(true));
     }
 
+    @FXML private MenuItem menuItemHome;
     @FXML private MenuItem menuItemSeller;
     @FXML private MenuItem menuItemDepartment;
     @FXML private MenuItem menuItemAbout;
 
     @FXML
-    public void onMenuItemSellerAction(){
+    public void onMenuItemHomeAction() {
+        loadView("/gui/Home.fxml", x -> {});
+    }
+
+    @FXML
+    public void onMenuItemSellerAction() {
         System.out.println("onMenuItemSellerAction");
     }
 
