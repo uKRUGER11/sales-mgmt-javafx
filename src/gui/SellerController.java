@@ -20,6 +20,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import model.entities.Seller;
+import model.services.DepartmentService;
 import model.services.SellerService;
 
 import java.io.IOException;
@@ -60,7 +61,7 @@ public class SellerController implements Initializable, DataChangeListener {
     public void onBtNewAction(ActionEvent event) {
         Stage parentStage = Utils.currentStage(event);
         Seller obj = new Seller();
-        //createDialogForm(obj,"/gui/SellerForm.fxml", parentStage);
+        createDialogForm(obj,"/gui/SellerForm.fxml", parentStage);
     }
 
     public void setSellerService(SellerService service) {
@@ -86,14 +87,14 @@ public class SellerController implements Initializable, DataChangeListener {
     }
 
     public void createDialogForm(Seller obj, String absoluteName, Stage parentStage) {
-        /**
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
             Pane pane = loader.load();
 
             SellerFormController controller = loader.getController();
             controller.setSeller(obj);
-            controller.setSellerService(new SellerService());
+            controller.setService(new SellerService(), new DepartmentService());
+            controller.loadAssociatedObjects();
             controller.subscribeDataChangeListener(this);
             controller.updateFormData();
 
@@ -106,9 +107,9 @@ public class SellerController implements Initializable, DataChangeListener {
             dialogStage.initStyle(StageStyle.TRANSPARENT);
             dialogStage.showAndWait();
         } catch (IOException e) {
+            e.printStackTrace();
             Alerts.showAlert("IOException", "Erro ao carregar a página", e.getMessage(), Alert.AlertType.ERROR);
         }
-     **/
     }
 
     public void updateTableView() {

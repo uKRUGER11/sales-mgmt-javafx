@@ -15,10 +15,10 @@
             <Insets left="15.0" top="10.0" />
          </padding>
       </Label>
-      <Label style="-fx-font-family: SansSerif;" text="Aplicação para gerenciamento de vendedores e seus departamentos.">
-         <padding>
-            <Insets left="15.0" top="5.0" />
-         </padding>
+      <Label prefHeight="178.0" prefWidth="404.0" text="Sistema de gerenciamento que permite visualizar e gerenciar informações detalhadas de funcionários e departamentos. Com acesso a um banco de dados, é possível armazenar e manipular eficientemente os dados. Voltada para a área de Recursos Humanos, a aplicação oferece recursos para lidar com um grande volume de dados, facilitando a manutenção e atualização das informações. Assim sendo uma ferramenta valiosa para empresas, permitindo ao RH acesso rápido e fácil aos dados necessários para realizar tarefas como contratação, alocação, promoções e transferências de funcionários, tornando-se essencial na gestão de pessoal." textAlignment="JUSTIFY" wrapText="true">
+         <VBox.margin>
+            <Insets left="15.0" />
+         </VBox.margin>
       </Label>
    </children>
 </VBox>

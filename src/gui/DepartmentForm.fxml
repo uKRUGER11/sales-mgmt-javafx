@@ -25,10 +25,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label style="-fx-font-family: SansSerif;" text="ID" />
-            <Label style="-fx-font-family: SansSerif;" text="Nome" GridPane.rowIndex="1" />
-            <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
-            <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label style="-fx-font-family: SansSerif;" stylesheets="@../application/MainStyle.css" text="ID" />
+            <Label style="-fx-font-family: SansSerif;" stylesheets="@../application/MainStyle.css" text="Nome" GridPane.rowIndex="1" />
+            <TextField fx:id="txtId" editable="false" style="-fx-font-family: SansSerif;" styleClass="txtFields" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" />
+            <TextField fx:id="txtName" style="-fx-font-family: SansSerif;" styleClass="txtFields" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <padding>
                   <Insets left="10.0" />
@@ -53,7 +53,7 @@
             </HBox>
          </children>
       </GridPane>
-      <Label layoutX="14.0" layoutY="14.0" style="-fx-font-family: SansSerif;" text="Digite os dados do departamento">
+      <Label layoutX="14.0" layoutY="14.0" style="-fx-font-family: SansSerif;" stylesheets="@../application/MainStyle.css" text="Digite os dados do departamento">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

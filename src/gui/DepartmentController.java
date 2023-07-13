@@ -93,6 +93,7 @@ public class DepartmentController implements Initializable, DataChangeListener {
             dialogStage.initStyle(StageStyle.TRANSPARENT);
             dialogStage.showAndWait();
         } catch (IOException e) {
+            e.printStackTrace();
             Alerts.showAlert("IOException", "Erro ao carregar a página", e.getMessage(), Alert.AlertType.ERROR);
         }
     }

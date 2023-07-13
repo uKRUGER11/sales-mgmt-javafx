@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="312.0" prefWidth="542.0" styleClass="form" stylesheets="@../application/MainStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SellerFormController">
+   <children>
+      <GridPane layoutX="20.0" layoutY="37.0" prefHeight="258.0" prefWidth="496.0" stylesheets="@../application/MainStyle.css" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="37.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="164.0" minWidth="10.0" prefWidth="81.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="279.0" minWidth="10.0" prefWidth="210.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="201.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label style="-fx-font-family: SansSerif;" stylesheets="@../application/MainStyle.css" text="ID" />
+            <Label style="-fx-font-family: SansSerif;" stylesheets="@../application/MainStyle.css" text="Nome" GridPane.rowIndex="1" />
+            <TextField fx:id="txtId" editable="false" style="-fx-font-family: SansSerif;" styleClass="txtFields" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" />
+            <TextField fx:id="txtName" style="-fx-font-family: SansSerif;" styleClass="txtFields" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtEmail" style="-fx-font-family: SansSerif;" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dpBirthDate" prefHeight="25.0" prefWidth="211.0" style="-fx-font-family: SansSerif;" styleClass="button-combo" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="txtBaseSalary" style="-fx-font-family: SansSerif;" styleClass="txtFields" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <ComboBox fx:id="comboDepartment" prefHeight="25.0" prefWidth="215.0" style="-fx-font-family: SansSerif;" styleClass="button-combo" stylesheets="@../application/MainStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="labelErrorName" stylesheets="@../application/MainStyle.css" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="36.0" prefWidth="218.0" spacing="20.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <children>
+                  <Button fx:id="btSave" mnemonicParsing="false" onAction="#onBtSaveAction" style="-fx-font-family: SansSerif;" styleClass="button-save" stylesheets="@../application/MainStyle.css" text="Salvar">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="btCancel" mnemonicParsing="false" onAction="#onBtCancelAction" style="-fx-font-family: SansSerif;" styleClass="button-cancel" stylesheets="@../application/MainStyle.css" text="Cancelar">
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <Label stylesheets="@../application/MainStyle.css" text="E-mail" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="118.0" stylesheets="@../application/MainStyle.css" text="Data de Nascimento" GridPane.rowIndex="3">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font></Label>
+            <Label prefHeight="17.0" prefWidth="68.0" stylesheets="@../application/MainStyle.css" text="Salário (R$)" GridPane.rowIndex="4" />
+            <Label stylesheets="@../application/MainStyle.css" text="Departamento" GridPane.rowIndex="5" />
+            <Label fx:id="labelErrorName1" textFill="RED">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelErrorEmail" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelErrorBirthDate" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelErrorBaseSalary" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="14.0" layoutY="14.0" style="-fx-font-family: SansSerif;" text="Digite os dados do vendedor(a)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+   </children>
+</AnchorPane>

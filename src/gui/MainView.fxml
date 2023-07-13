@@ -26,7 +26,7 @@
                            </items></Menu>
                                 <Menu style="-fx-font-family: SansSerif;" text="Cadastro">
                                     <items>
-                                        <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" styleClass="menu-item" text="Vendedor" />
+                                        <MenuItem fx:id="menuItemSeller" mnemonicParsing="false" onAction="#onMenuItemSellerAction" styleClass="menu-item" text="Vendedor(a)" />
                                         <MenuItem fx:id="menuItemDepartment" mnemonicParsing="false" onAction="#onMenuItemDepartmentAction" styleClass="menu-item" text="Departamento" />
                                     </items>
                                 </Menu>
@@ -43,7 +43,7 @@
         </ScrollPane>
         <Pane fx:id="titlePane" layoutX="11.0" layoutY="1.0" prefHeight="39.0" prefWidth="582.0">
             <children>
-                <Label layoutX="32.0" layoutY="11.0" styleClass="test" stylesheets="@../application/MainStyle.css" text="Gerenciador de Vendas" textFill="WHITE">
+                <Label layoutX="32.0" layoutY="11.0" styleClass="test" stylesheets="@../application/MainStyle.css" text="Gerenciador de Colaboradores" textFill="WHITE">
                <font>
                   <Font name="SansSerif Regular" size="12.0" />
                </font></Label>

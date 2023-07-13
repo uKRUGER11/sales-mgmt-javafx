@@ -16,6 +16,11 @@
 .form {
     -fx-background-radius: 0;
     -fx-background-color: #00000025;
+    -fx-font-family: SansSerif;
+}
+
+.txtFields {
+    -fx-font-family: SansSerif;
 }
 
 .button-new {
@@ -32,6 +37,12 @@
 
 .button-cancel {
     -fx-background-color: #cc0000;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.button-combo {
+    -fx-background-color: #00000025;
     -fx-text-fill: white;
     -fx-font-weight: bold;
 }

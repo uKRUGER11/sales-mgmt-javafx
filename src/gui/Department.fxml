@@ -26,7 +26,7 @@
       </ToolBar>
       <TableView fx:id="tableViewDepartment" prefHeight="200.0" prefWidth="200.0" styleClass="menu-bar" stylesheets="@../application/MainStyle.css">
         <columns>
-          <TableColumn fx:id="tableColumnId" prefWidth="41.0" style="-fx-font-family: SansSerif;" text="ID" />
+          <TableColumn fx:id="tableColumnId" prefWidth="40.0" style="-fx-font-family: SansSerif;" text="ID" />
           <TableColumn fx:id="tableColumnName" prefWidth="131.0" style="-fx-font-family: SansSerif;" text="Nome" />
             <TableColumn fx:id="tableColumnEdit" prefWidth="68.0" style="-fx-font-family: SansSerif;" />
             <TableColumn fx:id="tableColumnDelete" prefWidth="70.0" />
