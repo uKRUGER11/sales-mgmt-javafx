@@ -28,7 +28,8 @@
         <columns>
           <TableColumn fx:id="tableColumnId" prefWidth="75.0" style="-fx-font-family: SansSerif;" text="ID" />
           <TableColumn fx:id="tableColumnName" prefWidth="75.0" style="-fx-font-family: SansSerif;" text="Nome" />
-            <TableColumn fx:id="tableColumnEdit" style="-fx-font-family: SansSerif;" prefWidth="75.0" />
+            <TableColumn fx:id="tableColumnEdit" prefWidth="75.0" style="-fx-font-family: SansSerif;" />
+            <TableColumn fx:id="tableColumnDelete" prefWidth="75.0" />
         </columns>
       </TableView>
    </children>

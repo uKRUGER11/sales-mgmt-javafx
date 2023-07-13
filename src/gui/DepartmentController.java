@@ -1,5 +1,6 @@
 package gui;
 
+import db.DbIntegrityException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Utils;
@@ -24,6 +25,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 import static application.Main.getScene;
@@ -40,6 +42,8 @@ public class DepartmentController implements Initializable, DataChangeListener {
     @FXML private TableColumn<Department, String> tableColumnName;
 
     @FXML private TableColumn<Department, Department> tableColumnEdit;
+
+    @FXML private TableColumn<Department, Department> tableColumnDelete;
 
     @FXML private Button btNew;
 
@@ -101,6 +105,7 @@ public class DepartmentController implements Initializable, DataChangeListener {
         observableList = FXCollections.observableArrayList(list);
         tableViewDepartment.setItems(observableList);
         initEditButtons();
+        initRemoveButtons();
     }
 
     private void initEditButtons() {
@@ -120,10 +125,46 @@ public class DepartmentController implements Initializable, DataChangeListener {
                 button.getStyleClass().add(BUTTON_STYLE_CLASS);
                 button.setOnAction(
                         event -> createDialogForm(
-                                obj, "/gui/DepartmentForm.fxml",Utils.currentStage(event)));
+                                obj, "/gui/DepartmentForm.fxml", Utils.currentStage(event)));
             }
         });
     }
+
+    private void initRemoveButtons() {
+        tableColumnDelete.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
+        tableColumnDelete.setCellFactory(param -> new TableCell<Department, Department>() {
+            private final Button button = new Button("Deletar");
+            private static final String BUTTON_STYLE_CLASS = "button-cancel";
+            @Override
+            protected void updateItem(Department obj, boolean empty) {
+                super.updateItem(obj, empty);
+                if (obj == null) {
+                    setGraphic(null);
+                    return;
+                }
+                setGraphic(button);
+                setAlignment(Pos.CENTER);
+                button.getStyleClass().add(BUTTON_STYLE_CLASS);
+                button.setOnAction(event -> removeEntity(obj));
+            }
+        });
+    }
+
+    private void removeEntity(Department obj) {
+        Optional<ButtonType> result = Alerts.showConfirmation("Confirmação", "Você tem certeza em deletar esse departamento?");
+        if (result.get() == ButtonType.OK) {
+            if (service == null) {
+                throw new IllegalStateException("Service was null");
+            }
+            try {
+                service.delete(obj);
+                updateTableView();
+            } catch (DbIntegrityException e) {
+                Alerts.showAlert("Erro ao deletar o departamento", null, e.getMessage(), Alert.AlertType.ERROR);
+            }
+        }
+    }
+
 
     @Override
     public void onDataChanged() {
