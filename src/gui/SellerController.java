@@ -166,7 +166,7 @@ public class SellerController implements Initializable, DataChangeListener {
     }
 
     private void removeEntity(Seller obj) {
-        Optional<ButtonType> result = Alerts.showConfirmation("Confirmação", "Você tem certeza em deletar esse departamento?");
+        Optional<ButtonType> result = Alerts.showConfirmation("Confirmação", "Você tem certeza em deletar esse vendedor(a)?");
         if (result.get() == ButtonType.OK) {
             if (service == null) {
                 throw new IllegalStateException("Service was null");
@@ -175,7 +175,7 @@ public class SellerController implements Initializable, DataChangeListener {
                 service.delete(obj);
                 updateTableView();
             } catch (DbIntegrityException e) {
-                Alerts.showAlert("Erro ao deletar o departamento", null, e.getMessage(), Alert.AlertType.ERROR);
+                Alerts.showAlert("Erro ao deletar o vendedor(a)", null, e.getMessage(), Alert.AlertType.ERROR);
             }
         }
     }
