@@ -62,6 +62,47 @@
 
 > Com essa dependência entre as classes, é garantido que não seja possível excluir um departamento que tenha um vendedor associado. No entanto, é possível excluir um vendedor que esteja associado a um departamento, uma vez que a entidade `Department` é independente. Da mesma forma, não é possível cadastrar um vendedor sem um `- department` associado.
 
+<br>
+<div>
+  <h2 align="center">Instruções de Execução</h2>
+
+  <h4>Requisitos:</h4>
+  <p>
+    🔹
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java-logo" height="35" width="40"> Java 8 ou superior instalado no sistema.
+  </p>
+
+  <p>
+    🔹
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="javafx-logo" height="35" width="40">FX instalado e configurado corretamente.
+  </p>
+  <br>
+  <p>
+    <strong>Passo 1:</strong> Definir o caminho do módulo do JavaFX SDK.
+  </p>
+
+  <pre>
+    <code>--module-path /path/to/javafx-sdk-VERSION/lib</code>
+  </pre>
+
+  <p>
+    <strong>Passo 2:</strong> Adicionar os módulos do JavaFX.
+  </p>
+
+  <pre>
+    <code>--add-modules javafx.controls,javafx.fxml</code>
+  </pre>
+
+  <p>
+    <strong>Passo 3:</strong> Executar o arquivo JAR.
+  </p>
+
+  <pre>
+    <code>-jar sales_mgmt.jar</code>
+  </pre>
+
+</div>
+
 
 
 
