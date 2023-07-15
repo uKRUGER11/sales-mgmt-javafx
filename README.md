@@ -2,9 +2,9 @@
   <h1>Imagens da aplicação</h1>
   <table style="display: inline-table;">
     <tr>
-      <td><img src="gifs/telas.gif"></td>
-      <td><img src="gifs/tela-departamento.gif"></td>
-      <td><img src="gifs/tela-vendedor.gif"></td>
+      <td align="center"><img src="gifs/telas.gif"></td>
+      <td align="center"><img src="gifs/tela-departamento.gif">Departamentos</td>
+      <td align="center"><img src="gifs/tela-vendedor.gif">Vendedores(as)</td>
     </tr>
   </table>
 </div>
