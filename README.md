@@ -46,14 +46,28 @@
    </h4>
 </div>
 <br>
-<div>
     <h2 align="center">UML</h2>
-        <div align="center">
-          <img src="gifs/uml-sales-mgmt.png">
-        </div>
-    <h3> Destrinchando a estrutura: </h3>
-</div>
 
+```mermaid
+    classDiagram
+    class User {
+      - id: Integer
+      - name: String
+      - email: String
+      - birthDate: Date
+      - baseSalary: Double
+      + getDepartment()
+    }
+
+    class Department {
+      - id: Integer
+      - name: String
+    }
+
+    User --> "1" Department : -department
+```
+
+<h3> Destrinchando a estrutura: </h3>
 🔹 `Seller`: Entidade que representa um vendedor ou vendedora e armazena informações como nome, e-mail, data de nascimento, salário e o departamento ao qual ele pertence.
 
 🔹 `Department`: Entidade que representa um departamento ou setor da empresa e coleta informações básicas, como um número de identificação único e o nome do departamento.
