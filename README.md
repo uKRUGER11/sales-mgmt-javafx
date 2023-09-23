@@ -10,12 +10,7 @@
 </div>
 <br>
 <h4>
-    Do ponto de vista do usuário, trate-se de um sistema de gerenciamento que permite visualizar e gerenciar informações detalhadas de funcionários e departamentos. 
-    Com acesso a um banco de dados, ela oferece uma maneira eficiente de armazenar e manipular dados relacionados a funcionários e departamentos. 
-    Essa aplicação por exemplo, seria ideal para atender às necessidades do setor de Recursos Humanos, a aplicação fornece recursos avançados para lidar com um grande 
-    volume de informações, facilitando a manutenção e atualização dos dados.
-    <br><br>
-    Do ponto de vista técnico, o projeto consiste em um CRUD para o gerenciamento de vendedores e departamentos com acesso ao banco de dados relacional, através de tabelas e colunas. 
+    CRUD para o gerenciamento de vendedores e departamentos com acesso ao banco de dados relacional, através de tabelas e colunas. 
     No entanto, além disso, a aplicação também incorpora o conceito de tratamento de eventos. Isso significa que a tabela exibe informações atualizadas em tempo real durante a execução do programa. 
     Os formulários são tratados como eventos e observados pela tabela, tanto para a entidade de departamento quanto para a de vendedores.
     <br><br>
@@ -23,13 +18,6 @@
     Eles seguem as regras de negócio da aplicação, garantindo que todos os campos sejam preenchidos corretamente. 
     Caso algum campo seja deixado em branco, o sistema exibirá mensagens de erro e não permitirá o cadastro ou a edição até que todas as informações necessárias sejam fornecidas. 
     Esse tratamento de exceções assegura a integridade dos dados e evita erros durante o processo de inserção ou atualização.
-    <br><br>
-    Mas o que significa observar esses eventos? Basicamente, a observação dos eventos garante a atualização de todos os campos, como as tabelas e os formulários de cadastro e edição. 
-    Para ilustrar, se um novo departamento é cadastrado, quando você for cadastrar um novo vendedor, esse novo departamento estará disponível para seleção. 
-    Esse mecanismo segue o padrão de design conhecido como Observer, em que as alterações em um objeto são notificadas e refletidas em outros objetos que estão observando.
-    <br><br>
-    Essa abordagem técnica traz uma dinâmica eficiente para a aplicação, garantindo que as informações sejam sincronizadas e atualizadas em tempo real.
-</h4>
 <br>
 <div>
 <h2 align="center">Tecnologias Usadas</h2>
